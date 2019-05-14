@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="3" ignored="0" total="7" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="用户管理系统测试套件" duration-ms="23358" started-at="2019-05-14T03:04:03Z" finished-at="2019-05-14T03:04:26Z">
+    <groups>
+      <group name="loginTrue">
+        <method signature="LoginTest.loginTrue()[pri:0, instance:com.course.cases.LoginTest@6d86b085]" name="loginTrue" class="com.course.cases.LoginTest"/>
+      </group> <!-- loginTrue -->
+      <group name="loginFalse">
+        <method signature="LoginTest.loginFalse()[pri:0, instance:com.course.cases.LoginTest@6d86b085]" name="loginFalse" class="com.course.cases.LoginTest"/>
+      </group> <!-- loginFalse -->
+      <group name="getUserList">
+        <method signature="GetUserListTest.getUserList()[pri:0, instance:com.course.cases.GetUserListTest@77afea7d]" name="getUserList" class="com.course.cases.GetUserListTest"/>
+      </group> <!-- getUserList -->
+    </groups>
+    <test name="用户管理系统测试用例" duration-ms="23358" started-at="2019-05-14T03:04:03Z" finished-at="2019-05-14T03:04:26Z">
+      <class name="com.course.cases.UpdateUserInfoTest">
+        <test-method status="PASS" signature="updateUserInfo()[pri:0, instance:com.course.cases.UpdateUserInfoTest@161cd475]" name="updateUserInfo" duration-ms="10125" depends-on-groups="loginTrue" started-at="2019-05-14T11:04:06Z" description="更新用户信息" finished-at="2019-05-14T11:04:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateUserInfo -->
+        <test-method status="PASS" signature="deleteUserInfo()[pri:0, instance:com.course.cases.UpdateUserInfoTest@161cd475]" name="deleteUserInfo" duration-ms="10356" depends-on-groups="loginTrue" started-at="2019-05-14T11:04:16Z" description="删除用户信息" finished-at="2019-05-14T11:04:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteUserInfo -->
+      </class> <!-- com.course.cases.UpdateUserInfoTest -->
+      <class name="com.course.cases.GetUserInfoTest">
+        <test-method status="FAIL" signature="getUserInfo()[pri:0, instance:com.course.cases.GetUserInfoTest@2ff5659e]" name="getUserInfo" duration-ms="161" depends-on-groups="loginTrue" started-at="2019-05-14T11:04:05Z" description="获取userId为1的用户信息" finished-at="2019-05-14T11:04:05Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [{"age":21,"gender":"female","id":2,"isDelete":1,"password":"111111","permission":1,"userName":"luffy"}] but found ["[{\"id\":2,\"userName\":\"luffy\",\"password\":\"111111\",\"gender\":\"female\",\"age\":21,\"permission\":1,\"isDelete\":1}]"]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [{"age":21,"gender":"female","id":2,"isDelete":1,"password":"111111","permission":1,"userName":"luffy"}] but found ["[{\"id\":2,\"userName\":\"luffy\",\"password\":\"111111\",\"gender\":\"female\",\"age\":21,\"permission\":1,\"isDelete\":1}]"]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:190)
+	at org.testng.Assert.assertEquals(Assert.java:200)
+	at com.course.cases.GetUserInfoTest.getUserInfo(GetUserInfoTest.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at com.course.RunTestNGXml.main(RunTestNGXml.java:14)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUserInfo -->
+      </class> <!-- com.course.cases.GetUserInfoTest -->
+      <class name="com.course.cases.LoginTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.course.cases.LoginTest@6d86b085]" name="beforeTest" is-config="true" duration-ms="602" started-at="2019-05-14T11:04:03Z" description="测试准备工作" finished-at="2019-05-14T11:04:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="loginTrue()[pri:0, instance:com.course.cases.LoginTest@6d86b085]" name="loginTrue" duration-ms="1408" started-at="2019-05-14T11:04:04Z" description="用户登录成功接口测试" finished-at="2019-05-14T11:04:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTrue -->
+        <test-method status="PASS" signature="loginFalse()[pri:0, instance:com.course.cases.LoginTest@6d86b085]" name="loginFalse" duration-ms="117" started-at="2019-05-14T11:04:05Z" description="登录接口失败测试" finished-at="2019-05-14T11:04:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFalse -->
+      </class> <!-- com.course.cases.LoginTest -->
+      <class name="com.course.cases.AddUserTest">
+        <test-method status="FAIL" signature="addUser()[pri:0, instance:com.course.cases.AddUserTest@75828a0f]" name="addUser" duration-ms="185" depends-on-groups="loginTrue" started-at="2019-05-14T11:04:05Z" description="添加用户接口测试" finished-at="2019-05-14T11:04:05Z">
+          <exception class="org.apache.ibatis.exceptions.TooManyResultsException">
+            <message>
+              <![CDATA[Expected one result (or null) to be returned by selectOne(), but found: 42]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 42
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:81)
+	at com.course.cases.AddUserTest.addUser(AddUserTest.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at com.course.RunTestNGXml.main(RunTestNGXml.java:14)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.apache.ibatis.exceptions.TooManyResultsException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addUser -->
+      </class> <!-- com.course.cases.AddUserTest -->
+      <class name="com.course.cases.GetUserListTest">
+        <test-method status="FAIL" signature="getUserList()[pri:0, instance:com.course.cases.GetUserListTest@77afea7d]" name="getUserList" duration-ms="363" depends-on-groups="loginTrue" started-at="2019-05-14T11:04:05Z" description="获取性别为男的用户信息" finished-at="2019-05-14T11:04:06Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [1] but found [47]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [1] but found [47]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.course.cases.GetUserListTest.getUserList(GetUserListTest.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at com.course.RunTestNGXml.main(RunTestNGXml.java:14)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUserList -->
+      </class> <!-- com.course.cases.GetUserListTest -->
+    </test> <!-- 用户管理系统测试用例 -->
+  </suite> <!-- 用户管理系统测试套件 -->
+</testng-results>

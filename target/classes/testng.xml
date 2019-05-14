@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="用户管理系统测试套件">
+    <test name="用户管理系统测试用例">
+        <classes>
+            <!--登录接口测试用例-->
+            <class name="com.course.cases.LoginTest">
+                <methods>
+                    <include name="loginTrue" />
+                    <include name="loginFalse" />
+                </methods>
+            </class>
+            <!--添加用户接口测试用例-->
+            <class name="com.course.cases.AddUserTest">
+                <methods>
+                    <include name="addUser"/>
+                </methods>
+            </class>
+
+            <!--获取用户信息接口测试用例-->
+            <class name="com.course.cases.GetUserInfoTest">
+                <methods>
+                    <include name="getUserInfo"/>
+                </methods>
+            </class>
+
+            <!--获取用户列表接口测试用例-->
+            <class name="com.course.cases.GetUserListTest">
+                <methods>
+                    <include name="getUserList" />
+                </methods>
+            </class>
+
+            <!--更新/删除用户信息接口测试用例-->
+            <class name="com.course.cases.UpdateUserInfoTest">
+                <methods>
+                    <include name="updateUserInfo" />
+                    <include name="deleteUserInfo" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <listeners>
+        <listener class-name="com.course.config.ExtentTestNGIReporterListener"/>
+    </listeners>
+</suite>
